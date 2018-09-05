@@ -33,7 +33,7 @@ if __name__ == "__main__":
     output.write('<odoo noupdate="1">\n')
     for k, row in enumerate(reader):
         zipcode, city, _, state_code = row[1: 5]
-        state = "%s" % state_code
+        state = "l10n_de_country_states.res_country_state_%s" % state_code
         city_id = "city_DE_%s" % k
 
         output.write(''.join([
